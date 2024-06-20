@@ -1,36 +1,38 @@
+import BlogCard from "../../component/BlogCard/BlogCard"
+import blog from "../../BlogData"
 import "./Home.css"
-import blogs from "../../data"
-import BlogCard from  "../../component/BlogCard/BlogCard"
 
 function Home() {
     return (
         <>
-        <div className="blogs-container">
             {
-                blogs.map((blogobj, i) => {
+                blog.map((blogobj, i) => {
                     const {
                         id, 
                         title,
-                        content,
+                        subtitle,
+                        discription,
                         author,
                         date,
-                        categories } = blogobj
-
+                        category,
+                        poster
+                    } = blogobj
                     return (
                         <BlogCard
-                        key = {i}
-                        id={id}
-                        title={title}
-                        content={content}
-                        author={author}
-                        date={date}
-                        categories={categories}
+                            key={i}
+                            id={id}
+                            title={title}
+                            subtitle={subtitle}
+                            discription={discription}
+                            author={author}
+                            date={date}
+                            category={category}
+                            poster={poster}
                         />
                     )
-
                 })
             }
-            </div>
+
         </>
     )
 }

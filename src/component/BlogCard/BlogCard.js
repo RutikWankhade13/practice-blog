@@ -1,19 +1,30 @@
+import React from 'react'
 import "./BlogCard.css"
-import { Link } from "react-router-dom"
-function BlogCard ({id,title, content,author,date,categories}) {
+import { Link } from 'react-router-dom'
+function BlogCard({ id, title, subtitle, discription, author, date, category, poster }) {
   return (
-   <Link to={`/blog/${id}`} className="blog-card">
-    <h1 className="blog-title">{title}</h1>
-    <p className="Blog-content-preview">{content.substring(0,130)}......</p>
-    <div className="author-card">
-      <img src={author.avtar} alt="author" className="author-avtar"/>
-      <span className="author-name">{author.name}</span>
-      <span className="blog-date">{date}</span>
-    </div>
-{categories.map((category , i)=>{
-return <span key={i} className="category-badge">{category}</span>
-})}
-   </Link>
+    
+      <Link to={`/blog/${id}`} className='blog-card'>
+        <div>
+          <div className='author-info'>
+            <img className='author-img' src={author.avtar} alt='author-img' />
+            <span>{author.name}</span>
+            <span>{date}</span>
+          </div>
+          <div>
+            <h1>{title}</h1>
+            <h4>{subtitle}</h4>
+            <span>{discription.substring(0, 150)}.......</span>
+          </div>
+          {category.map((category, i) => {
+            return <span key={i} className="category-badge">{category}</span>
+          })}
+        </div>
+        <div>
+          <img className='poster' alt='poster' src={poster} />
+        </div>
+      </Link>
+  
   )
 }
 

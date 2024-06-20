@@ -1,0 +1,61 @@
+.BlogView-div {
+    width: 800px;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    margin: 30px auto;
+}
+.author-info-blogview {
+
+    display: flex;
+    align-items: center;
+    width: 300px;
+    justify-content: space-around;
+    font-size: 15px;
+}
+.category-badge {
+    display: inline-block;
+    background-color: #ccc2c2;
+    color: rgb(0, 0, 0);
+    padding: 4px 15px;
+    margin:  10px 8px;
+    font-size: 15px;
+    border-radius: 20px;
+}
+.follow-btn{
+    color: rgb(0, 155, 0);
+    cursor: pointer;
+}
+.clap-img{
+    margin-bottom: -1px;
+    
+}
+.img-div{
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.img-media{
+    margin-right: 20px;
+    margin-top:5px;
+}
+.title{
+    font-size: 45px;
+    width: 600px;
+}
+.subtitle{
+    font-size: 20px;
+    width: 600px;
+}
+hr{
+    border: 0.001px solid rgb(228, 220, 220);
+}
+.poster-blogview{
+    margin-left: 50px;
+}
+.blogview-discription{
+    margin-top: 1em; /* Adds space at the top of the paragraph */
+    line-height: 1.6; /* Adjusts the line height for better readability */
+    font-size: 1.3rem; /* Sets the font size */
+    color: #333; /* Sets the text color */
+}
